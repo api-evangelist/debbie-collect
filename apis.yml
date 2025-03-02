@@ -5,7 +5,8 @@ apis:
   - aid: debbie-collect:debbie-collect
     name: Debbie Collect
     tags:
-      - API
+      - Financial
+      - Investment
     humanURL: ' https://www.debbiecollect.com/en/api-documentation'
     properties:
       - url: ' https://www.debbiecollect.com/en/api-documentation'
