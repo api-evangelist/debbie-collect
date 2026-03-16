@@ -7,9 +7,9 @@ apis:
     tags:
       - Financial
       - Investment
-    humanURL: ' https://www.debbiecollect.com/en/api-documentation'
+    humanURL: https://www.debbiecollect.com/en/api-documentation
     properties:
-      - url: ' https://www.debbiecollect.com/en/api-documentation'
+      - url: https://www.debbiecollect.com/en/api-documentation
         type: Documentation
     description: >-
       The Debbie APIs are a RESTful interface, allowing you to programmatically
@@ -25,7 +25,7 @@ type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 created: '2025-02-24'
-modified: '2025-03-01'
+modified: '2026-03-16'
 position: Consumer
 description: >-
   Debbie Collect is a dedicated financial analyst who specializes in collecting
@@ -38,5 +38,5 @@ description: >-
   trusted advisor in the finance industry.
 maintainers:
   - FN: Kin Lane
-    email: info@apievangelist.com
+    email: kin@apievangelist.com
 specificationVersion: '0.19'
