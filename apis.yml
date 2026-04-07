@@ -12,11 +12,10 @@ apis:
       - url: https://www.debbiecollect.com/en/api-documentation
         type: Documentation
     description: >-
-      The Debbie APIs are a RESTful interface, allowing you to programmatically
-      update, add and access much of your data on the platform. It provides
-      predictable URLs for accessing resources, and uses built-in HTTP features
-      to receive commands and return responses. This makes it easy to
-      communicate with third party systems. 
+      The Debbie APIs are a RESTful interface, allowing you to programmatically update,
+      add and access much of your data on the platform. It provides predictable URLs
+      for accessing resources, and uses built-in HTTP features to receive commands
+      and return responses. This makes it easy to communicate with third party systems.
 name: Debbie Collect
 tags:
   - Financial
@@ -28,14 +27,12 @@ created: '2025-02-24'
 modified: '2026-03-16'
 position: Consumer
 description: >-
-  Debbie Collect is a dedicated financial analyst who specializes in collecting
-  and analyzing data to help companies make informed investment decisions. She
-  meticulously reviews financial statements, market trends, and economic
-  indicators to provide comprehensive reports and recommendations. With a keen
-  eye for detail and a strong analytical mindset, Debbie helps her clients
-  navigate the complexities of the financial world and achieve their financial
-  goals. Her professionalism, expertise, and commitment to excellence make her a
-  trusted advisor in the finance industry.
+  Debbie Collect is a dedicated financial analyst who specializes in collecting and
+  analyzing data to help companies make informed investment decisions. She meticulously
+  reviews financial statements, market trends, and economic indicators to provide
+  comprehensive reports and recommendations. With a keen eye for detail and a strong
+  analytical mindset, Debbie helps her clients navigate the complexities of the financial
+  world and achieve their financial goals.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
