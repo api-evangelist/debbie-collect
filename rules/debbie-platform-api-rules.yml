@@ -1,0 +1,40 @@
+extends:
+  - spectral:oas
+rules:
+  debbie-info-contact:
+    description: API info should include the Debbie API support contact.
+    given: $.info
+    severity: warn
+    then:
+      field: contact
+      function: truthy
+  debbie-base-url:
+    description: Servers should reference debbie.dk.
+    given: $.servers[*].url
+    severity: warn
+    then:
+      function: pattern
+      functionOptions:
+        match: "debbie\\.dk"
+  debbie-bearer-auth:
+    description: API should declare bearer-token authentication.
+    given: $.components.securitySchemes
+    severity: error
+    then:
+      field: bearerAuth
+      function: truthy
+  debbie-operation-tags:
+    description: Operations should be tagged Cases, Creditors, Customers, Webhooks, etc.
+    given: $.paths[*][*]
+    severity: warn
+    then:
+      field: tags
+      function: truthy
+  debbie-case-resource-paths:
+    description: API should expose /cases as a primary resource.
+    given: $.paths
+    severity: warn
+    then:
+      function: pattern
+      functionOptions:
+        match: "/cases"

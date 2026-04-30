@@ -1,0 +1,33 @@
+name: Debbie Collect Vocabulary
+description: >-
+  Shared vocabulary of terms used across the Debbie debt-collection
+  platform's Platform API and Client API.
+terms:
+  - term: Creditor
+    definition: An organization that is owed money and uses Debbie to collect.
+  - term: Customer
+    definition: >-
+      A debtor (person or business) who owes money to a creditor and is
+      contacted through Debbie.
+  - term: Case
+    definition: >-
+      A single collection matter linking a creditor and a customer with an
+      outstanding amount, lifecycle status, and history of activity.
+  - term: Voucher
+    definition: >-
+      A document attached to a case representing the underlying claim
+      (invoice, receipt, agreement) that justifies the debt.
+  - term: Update
+    definition: An event recorded against a case, debtor, or creditor.
+  - term: Payout
+    definition: >-
+      The transfer of funds collected from debtors back to the creditor,
+      net of fees.
+  - term: Deposit Distribution
+    definition: >-
+      The breakdown of how a payment received from a customer is allocated
+      across principal, fees, interest, and creditor share.
+  - term: Webhook Item
+    definition: >-
+      An individual webhook delivery event representing a change to a case,
+      payment, voucher, or other resource.

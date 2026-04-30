@@ -1,0 +1,61 @@
+openapi: 3.1.0
+info:
+  title: Debbie Client API
+  description: >-
+    The Debbie Client API is intended for creditors integrating directly
+    with Debbie. It allows clients to create and update collection cases,
+    exchange payment data, and receive case status updates.
+  version: "1.0"
+  contact:
+    name: Debbie API Support
+    email: api-support@debbie.dk
+servers:
+  - url: https://creditor.debbie.dk/api
+    description: Production
+tags:
+  - name: Cases
+  - name: Payments
+paths:
+  /cases:
+    post:
+      summary: Create a case
+      operationId: createCase
+      tags: [Cases]
+      responses:
+        "201":
+          description: Case created.
+  /cases/{caseId}:
+    get:
+      summary: Get a case
+      operationId: getCase
+      tags: [Cases]
+      parameters:
+        - in: path
+          name: caseId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: A case resource.
+  /cases/{caseId}/payments:
+    post:
+      summary: Submit payment information
+      operationId: submitPayment
+      tags: [Payments]
+      parameters:
+        - in: path
+          name: caseId
+          required: true
+          schema:
+            type: string
+      responses:
+        "201":
+          description: Payment recorded.
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+security:
+  - bearerAuth: []

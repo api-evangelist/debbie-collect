@@ -1,0 +1,23 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://schema.debbiecollect.com/",
+    "schema": "https://schema.org/",
+    "debbie": "https://schema.debbiecollect.com/",
+    "Case": "debbie:Case",
+    "Customer": "schema:Person",
+    "Creditor": "schema:Organization",
+    "Voucher": "debbie:Voucher",
+    "Payment": "schema:PaymentMethod",
+    "id": {"@id": "schema:identifier"},
+    "name": {"@id": "schema:name", "@type": "schema:Text"},
+    "email": {"@id": "schema:email", "@type": "schema:Text"},
+    "phone": {"@id": "schema:telephone", "@type": "schema:Text"},
+    "principal_amount": {"@id": "debbie:principalAmount", "@type": "schema:Number"},
+    "outstanding_amount": {"@id": "debbie:outstandingAmount", "@type": "schema:Number"},
+    "currency": {"@id": "schema:priceCurrency", "@type": "schema:Text"},
+    "status": {"@id": "debbie:status", "@type": "schema:Text"},
+    "due_date": {"@id": "schema:dueDate", "@type": "schema:Date"},
+    "reference_id": {"@id": "debbie:referenceId", "@type": "schema:Text"}
+  }
+}

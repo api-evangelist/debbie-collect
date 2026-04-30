@@ -1,0 +1,254 @@
+openapi: 3.1.0
+info:
+  title: Debbie Platform API
+  description: >-
+    The Debbie Platform API is a RESTful interface for debt-collection
+    operations on the Debbie SaaS platform. It exposes resources for
+    creditors, cases, customers (debtors), payments and payouts, vouchers,
+    files, updates, and webhook subscriptions.
+  version: "1.0"
+  contact:
+    name: Debbie API Support
+    email: api-support@debbie.dk
+servers:
+  - url: https://api.debbie.dk
+    description: Production
+tags:
+  - name: Cases
+  - name: Case Vouchers
+  - name: Creditors
+  - name: Customers
+  - name: Files
+  - name: Properties
+  - name: Updates
+  - name: Webhooks
+  - name: Billing
+paths:
+  /cases:
+    get:
+      summary: List cases
+      operationId: listCases
+      tags: [Cases]
+      responses:
+        "200":
+          description: A paginated list of cases.
+    post:
+      summary: Create a case
+      operationId: createCase
+      tags: [Cases]
+      responses:
+        "201":
+          description: Case created.
+  /cases/{caseId}:
+    get:
+      summary: Get a case
+      operationId: getCase
+      tags: [Cases]
+      parameters:
+        - in: path
+          name: caseId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: A case resource.
+    patch:
+      summary: Update a case
+      operationId: patchCase
+      tags: [Cases]
+      parameters:
+        - in: path
+          name: caseId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Updated case.
+  /cases/{caseId}/vouchers:
+    get:
+      summary: Get case vouchers
+      operationId: getCaseVouchers
+      tags: [Case Vouchers]
+      parameters:
+        - in: path
+          name: caseId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Vouchers attached to a case.
+    post:
+      summary: Add case voucher
+      operationId: addCaseVoucher
+      tags: [Case Vouchers]
+      parameters:
+        - in: path
+          name: caseId
+          required: true
+          schema:
+            type: string
+      responses:
+        "201":
+          description: Voucher added.
+  /creditors:
+    post:
+      summary: Create a creditor
+      operationId: createCreditor
+      tags: [Creditors]
+      responses:
+        "201":
+          description: Creditor created.
+  /creditors/{creditorId}:
+    get:
+      summary: Get a creditor
+      operationId: getCreditor
+      tags: [Creditors]
+      parameters:
+        - in: path
+          name: creditorId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: A creditor resource.
+    patch:
+      summary: Update a creditor
+      operationId: patchCreditor
+      tags: [Creditors]
+      parameters:
+        - in: path
+          name: creditorId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Updated creditor.
+  /customers:
+    post:
+      summary: Create a customer (debtor)
+      operationId: createCustomer
+      tags: [Customers]
+      responses:
+        "201":
+          description: Customer created.
+  /customers/{customerId}:
+    get:
+      summary: Get a customer
+      operationId: getCustomer
+      tags: [Customers]
+      parameters:
+        - in: path
+          name: customerId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: A customer resource.
+    patch:
+      summary: Update a customer
+      operationId: patchCustomer
+      tags: [Customers]
+      parameters:
+        - in: path
+          name: customerId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Updated customer.
+  /files:
+    post:
+      summary: Upload a file
+      operationId: createFile
+      tags: [Files]
+      responses:
+        "201":
+          description: File created.
+  /files/{fileId}:
+    get:
+      summary: Get a file
+      operationId: getFile
+      tags: [Files]
+      parameters:
+        - in: path
+          name: fileId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: A file resource.
+  /properties:
+    get:
+      summary: Get properties by reference
+      operationId: getProperties
+      tags: [Properties]
+      responses:
+        "200":
+          description: Properties for a referenced resource.
+  /updates:
+    post:
+      summary: Create an update
+      operationId: createUpdate
+      tags: [Updates]
+      responses:
+        "201":
+          description: Update created.
+  /updates/{updateId}:
+    patch:
+      summary: Update an update
+      operationId: patchUpdate
+      tags: [Updates]
+      parameters:
+        - in: path
+          name: updateId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Updated update.
+  /webhooks/items:
+    get:
+      summary: List webhook items
+      operationId: listWebhookItems
+      tags: [Webhooks]
+      responses:
+        "200":
+          description: Webhook delivery items.
+  /webhooks/items/{itemId}:
+    patch:
+      summary: Patch a webhook item
+      operationId: patchWebhookItem
+      tags: [Webhooks]
+      parameters:
+        - in: path
+          name: itemId
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Updated webhook item.
+  /billing/deposit-distribution:
+    get:
+      summary: Get deposit distribution
+      operationId: getDepositDistribution
+      tags: [Billing]
+      responses:
+        "200":
+          description: Deposit distribution detail.
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+security:
+  - bearerAuth: []

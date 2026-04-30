@@ -1,42 +1,63 @@
 # Debbie Collect (debbie-collect)
-Debbie Collect is a dedicated financial analyst who specializes in collecting and analyzing data to help companies make informed investment decisions. She meticulously reviews financial statements, market trends, and economic indicators to provide comprehensive reports and recommendations. With a keen eye for detail and a strong analytical mindset, Debbie helps her clients navigate the complexities of the financial world and achieve their financial goals. Her professionalism, expertise, and commitment to excellence make her a trusted advisor in the finance industry.
+
+Debbie (Debbie Collect, operated by Intellitech Systems A/S) is an AI-driven SaaS platform that automates debt collection and accounts receivable management. Companies, collection agencies, and law firms use Debbie to run digital reminder flows, debtor dialogue, payment plans, and case management.
 
 **URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/debbie-collect/refs/heads/main/apis.yml)
 
 ## Scope
 
-- **Type:** Index 
-- **Position:** Consumer 
-- **Access:** 3rd-Party 
+- **Type:** Contract
+- **Position:** Consuming
+- **Access:** 3rd-Party
+- **x-type:** company
 
-## Tags:
+## Tags
 
- - Financial, Investment
+- Accounts Receivable, Collections, Debt Collection, FinTech, Payments, SaaS
 
 ## Timestamps
 
-- **Created:** 2025-02-24 
-- **Modified:** 2025-03-01 
+- **Created:** 2025-02-24
+- **Modified:** 2026-04-28
 
 ## APIs
 
-### Debbie Collect
-The Debbie APIs are a RESTful interface, allowing you to programmatically update, add and access much of your data on the platform. It provides predictable URLs for accessing resources, and uses built-in HTTP features to receive commands and return responses. This makes it easy to communicate with third party systems. 
+### Debbie Platform API
 
-**Human URL:** [ https://www.debbiecollect.com/en/api-documentation]( https://www.debbiecollect.com/en/api-documentation)
+The Debbie Platform API exposes resources for cases, creditors, customers, vouchers, files, updates, billing, and webhooks. It is used by collection agencies and other operators integrating Debbie into their core systems.
 
-
-#### Tags:
-
- - Financial, Investment
+- **Base URL:** https://api.debbie.dk
+- **Human URL:** https://documentation.debbiecollect.com
 
 #### Properties
 
-- [Documentation]( https://www.debbiecollect.com/en/api-documentation)
+- [Documentation](https://documentation.debbiecollect.com)
+- [OpenAPI](openapi/debbie-platform-api-openapi.yml)
+- [JSONSchema - Case](json-schema/debbie-case.json)
+- [JSONSchema - Customer](json-schema/debbie-customer.json)
+- [Rules](rules/debbie-platform-api-rules.yml)
+- [Capabilities](capabilities/debbie-platform-api-capabilities.yml)
+
+### Debbie Client API
+
+The Debbie Client API allows creditors to create collection cases, exchange payment data, and receive case status updates. It is the primary integration surface for ERP/billing systems pushing overdue invoices into Debbie.
+
+- **Base URL:** https://creditor.debbie.dk/api
+- **Human URL:** https://creditor-docs.debbie.dk
+
+#### Properties
+
+- [Documentation](https://creditor-docs.debbie.dk)
+- [OpenAPI](openapi/debbie-client-api-openapi.yml)
+
+## Common Properties
+
+- [Website](https://debbiecollect.com/)
+- [API Documentation](https://debbiecollect.com/api-documentation)
+- [Status](https://debbie.freshstatus.io)
+- [JSON-LD](json-ld/debbie-context.jsonld)
+- [Vocabulary](vocabulary/debbie-vocabulary.yml)
 
 ## Maintainers
 
-**FN:** Kin Lane
-
-**Email:** info@apievangelist.com
-
+- **Kin Lane** - kin@apievangelist.com
