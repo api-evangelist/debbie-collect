@@ -2,7 +2,7 @@ aid: debbie-collect
 name: Debbie Collect
 url: >-
   https://raw.githubusercontent.com/api-evangelist/debbie-collect/refs/heads/main/apis.yml
-type: Contract
+kind: contract
 position: Consuming
 access: 3rd-Party
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
@@ -16,7 +16,7 @@ tags:
 created: '2025-02-24'
 modified: '2026-04-28'
 specificationVersion: '0.19'
-xType: company
+kind: company
 description: >-
   Debbie (Debbie Collect, operated by Intellitech Systems A/S) is an
   AI-driven SaaS platform that automates debt collection and accounts
@@ -77,7 +77,7 @@ common:
     url: https://debbiecollect.com/
   - type: API Documentation
     url: https://debbiecollect.com/api-documentation
-  - type: Status
+  - type: StatusPage
     url: https://debbie.freshstatus.io
   - type: Security & Compliance
     url: https://debbiecollect.com/security-compliance-2
@@ -85,7 +85,7 @@ common:
     url: https://debbiecollect.com/blog
   - type: Support
     url: mailto:api-support@debbie.dk
-  - type: JSON-LD
+  - type: JSONLD
     url: json-ld/debbie-context.jsonld
   - type: Vocabulary
     url: vocabulary/debbie-vocabulary.yml
