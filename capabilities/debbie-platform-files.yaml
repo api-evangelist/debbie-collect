@@ -1,0 +1,111 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Debbie Platform API — Files
+  description: 'Debbie Platform API — Files. 2 operations. Lead operation: Upload a file. Self-contained Naftiko capability
+    covering one Debbie Collect business surface.'
+  tags:
+  - Debbie Collect
+  - Files
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    DEBBIE_COLLECT_API_KEY: DEBBIE_COLLECT_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: debbie-platform-files
+    baseUri: https://api.debbie.dk
+    description: Debbie Platform API — Files business capability. Self-contained, no shared references.
+    resources:
+    - name: files
+      path: /files
+      operations:
+      - name: createfile
+        method: POST
+        description: Upload a file
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: files-fileId
+      path: /files/{fileId}
+      operations:
+      - name: getfile
+        method: GET
+        description: Get a file
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: fileId
+          in: path
+          type: string
+          required: true
+    authentication:
+      type: bearer
+      token: '{{env.DEBBIE_COLLECT_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: debbie-platform-files-rest
+    port: 8080
+    description: REST adapter for Debbie Platform API — Files. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/files
+      name: files
+      description: REST surface for files.
+      operations:
+      - method: POST
+        name: createfile
+        description: Upload a file
+        call: debbie-platform-files.createfile
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/files/{fileid}
+      name: files-fileid
+      description: REST surface for files-fileId.
+      operations:
+      - method: GET
+        name: getfile
+        description: Get a file
+        call: debbie-platform-files.getfile
+        with:
+          fileId: rest.fileId
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: debbie-platform-files-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Debbie Platform API — Files. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: upload-file
+      description: Upload a file
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: debbie-platform-files.createfile
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-file
+      description: Get a file
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: debbie-platform-files.getfile
+      with:
+        fileId: tools.fileId
+      outputParameters:
+      - type: object
+        mapping: $.

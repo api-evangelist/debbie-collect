@@ -1,0 +1,70 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Debbie Platform API — Properties
+  description: 'Debbie Platform API — Properties. 1 operations. Lead operation: Get properties by reference. Self-contained
+    Naftiko capability covering one Debbie Collect business surface.'
+  tags:
+  - Debbie Collect
+  - Properties
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    DEBBIE_COLLECT_API_KEY: DEBBIE_COLLECT_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: debbie-platform-properties
+    baseUri: https://api.debbie.dk
+    description: Debbie Platform API — Properties business capability. Self-contained, no shared references.
+    resources:
+    - name: properties
+      path: /properties
+      operations:
+      - name: getproperties
+        method: GET
+        description: Get properties by reference
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.DEBBIE_COLLECT_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: debbie-platform-properties-rest
+    port: 8080
+    description: REST adapter for Debbie Platform API — Properties. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/properties
+      name: properties
+      description: REST surface for properties.
+      operations:
+      - method: GET
+        name: getproperties
+        description: Get properties by reference
+        call: debbie-platform-properties.getproperties
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: debbie-platform-properties-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Debbie Platform API — Properties. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: get-properties-reference
+      description: Get properties by reference
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: debbie-platform-properties.getproperties
+      outputParameters:
+      - type: object
+        mapping: $.
