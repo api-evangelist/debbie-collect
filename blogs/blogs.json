@@ -2,6 +2,13 @@
   "repo": "debbie-collect",
   "feeds": [
     {
+      "source": "https://debbiecollect.com/blog",
+      "feed_url": "https://debbiecollect.com/blog",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
+    {
       "source": "https://debbiecollect.com/security-compliance-2",
       "feed_url": "https://debbiecollect.com/security-compliance-2",
       "title": "",
@@ -9,6 +16,6 @@
       "method": "none"
     }
   ],
-  "fetched": "2026-06-01T23:35:02Z",
+  "fetched": "2026-06-14T20:42:17Z",
   "post_count": 0
 }

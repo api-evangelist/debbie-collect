@@ -1,0 +1,385 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Debbie Platform API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Cases",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List cases",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.debbie.dk/cases"
+          },
+          "docs": "List cases"
+        },
+        {
+          "info": {
+            "name": "Create a case",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.debbie.dk/cases"
+          },
+          "docs": "Create a case"
+        },
+        {
+          "info": {
+            "name": "Get a case",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.debbie.dk/cases/:caseId",
+            "params": [
+              {
+                "name": "caseId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a case"
+        },
+        {
+          "info": {
+            "name": "Update a case",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.debbie.dk/cases/:caseId",
+            "params": [
+              {
+                "name": "caseId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update a case"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Case Vouchers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get case vouchers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.debbie.dk/cases/:caseId/vouchers",
+            "params": [
+              {
+                "name": "caseId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get case vouchers"
+        },
+        {
+          "info": {
+            "name": "Add case voucher",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.debbie.dk/cases/:caseId/vouchers",
+            "params": [
+              {
+                "name": "caseId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Add case voucher"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Creditors",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a creditor",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.debbie.dk/creditors"
+          },
+          "docs": "Create a creditor"
+        },
+        {
+          "info": {
+            "name": "Get a creditor",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.debbie.dk/creditors/:creditorId",
+            "params": [
+              {
+                "name": "creditorId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a creditor"
+        },
+        {
+          "info": {
+            "name": "Update a creditor",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.debbie.dk/creditors/:creditorId",
+            "params": [
+              {
+                "name": "creditorId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update a creditor"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Customers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a customer (debtor)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.debbie.dk/customers"
+          },
+          "docs": "Create a customer (debtor)"
+        },
+        {
+          "info": {
+            "name": "Get a customer",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.debbie.dk/customers/:customerId",
+            "params": [
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a customer"
+        },
+        {
+          "info": {
+            "name": "Update a customer",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.debbie.dk/customers/:customerId",
+            "params": [
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update a customer"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Files",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Upload a file",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.debbie.dk/files"
+          },
+          "docs": "Upload a file"
+        },
+        {
+          "info": {
+            "name": "Get a file",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.debbie.dk/files/:fileId",
+            "params": [
+              {
+                "name": "fileId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a file"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Properties",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get properties by reference",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.debbie.dk/properties"
+          },
+          "docs": "Get properties by reference"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Updates",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create an update",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.debbie.dk/updates"
+          },
+          "docs": "Create an update"
+        },
+        {
+          "info": {
+            "name": "Update an update",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.debbie.dk/updates/:updateId",
+            "params": [
+              {
+                "name": "updateId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update an update"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Webhooks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List webhook items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.debbie.dk/webhooks/items"
+          },
+          "docs": "List webhook items"
+        },
+        {
+          "info": {
+            "name": "Patch a webhook item",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.debbie.dk/webhooks/items/:itemId",
+            "params": [
+              {
+                "name": "itemId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Patch a webhook item"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Billing",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get deposit distribution",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.debbie.dk/billing/deposit-distribution"
+          },
+          "docs": "Get deposit distribution"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
