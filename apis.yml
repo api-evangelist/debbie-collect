@@ -65,6 +65,8 @@ apis:
       - type: OpenAPI
         url: openapi/debbie-client-api-openapi.yml
 common:
+  - type: AgenticAccess
+    url: agentic-access/debbie-collect-agentic-access.yml
   - type: DomainSecurity
     url: security/debbie-collect-domain-security.yml
   - type: Authentication
