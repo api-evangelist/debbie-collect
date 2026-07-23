@@ -1,0 +1,50 @@
+openapi: 3.1.0
+info:
+  title: Debbie Client Billing Case Vouchers API
+  description: The Debbie Client API is intended for creditors integrating directly with Debbie. It allows clients to create and update collection cases, exchange payment data, and receive case status updates.
+  version: '1.0'
+  contact:
+    name: Debbie API Support
+    email: api-support@debbie.dk
+servers:
+- url: https://creditor.debbie.dk/api
+  description: Production
+security:
+- bearerAuth: []
+tags:
+- name: Case Vouchers
+paths:
+  /cases/{caseId}/vouchers:
+    get:
+      summary: Get case vouchers
+      operationId: getCaseVouchers
+      tags:
+      - Case Vouchers
+      parameters:
+      - in: path
+        name: caseId
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Vouchers attached to a case.
+    post:
+      summary: Add case voucher
+      operationId: addCaseVoucher
+      tags:
+      - Case Vouchers
+      parameters:
+      - in: path
+        name: caseId
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Voucher added.
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer

@@ -1,0 +1,59 @@
+openapi: 3.1.0
+info:
+  title: Debbie Client Billing Creditors API
+  description: The Debbie Client API is intended for creditors integrating directly with Debbie. It allows clients to create and update collection cases, exchange payment data, and receive case status updates.
+  version: '1.0'
+  contact:
+    name: Debbie API Support
+    email: api-support@debbie.dk
+servers:
+- url: https://creditor.debbie.dk/api
+  description: Production
+security:
+- bearerAuth: []
+tags:
+- name: Creditors
+paths:
+  /creditors:
+    post:
+      summary: Create a creditor
+      operationId: createCreditor
+      tags:
+      - Creditors
+      responses:
+        '201':
+          description: Creditor created.
+  /creditors/{creditorId}:
+    get:
+      summary: Get a creditor
+      operationId: getCreditor
+      tags:
+      - Creditors
+      parameters:
+      - in: path
+        name: creditorId
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: A creditor resource.
+    patch:
+      summary: Update a creditor
+      operationId: patchCreditor
+      tags:
+      - Creditors
+      parameters:
+      - in: path
+        name: creditorId
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Updated creditor.
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer

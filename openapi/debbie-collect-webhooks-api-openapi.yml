@@ -1,0 +1,45 @@
+openapi: 3.1.0
+info:
+  title: Debbie Client Billing Webhooks API
+  description: The Debbie Client API is intended for creditors integrating directly with Debbie. It allows clients to create and update collection cases, exchange payment data, and receive case status updates.
+  version: '1.0'
+  contact:
+    name: Debbie API Support
+    email: api-support@debbie.dk
+servers:
+- url: https://creditor.debbie.dk/api
+  description: Production
+security:
+- bearerAuth: []
+tags:
+- name: Webhooks
+paths:
+  /webhooks/items:
+    get:
+      summary: List webhook items
+      operationId: listWebhookItems
+      tags:
+      - Webhooks
+      responses:
+        '200':
+          description: Webhook delivery items.
+  /webhooks/items/{itemId}:
+    patch:
+      summary: Patch a webhook item
+      operationId: patchWebhookItem
+      tags:
+      - Webhooks
+      parameters:
+      - in: path
+        name: itemId
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Updated webhook item.
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer

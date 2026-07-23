@@ -1,0 +1,45 @@
+openapi: 3.1.0
+info:
+  title: Debbie Client Billing Files API
+  description: The Debbie Client API is intended for creditors integrating directly with Debbie. It allows clients to create and update collection cases, exchange payment data, and receive case status updates.
+  version: '1.0'
+  contact:
+    name: Debbie API Support
+    email: api-support@debbie.dk
+servers:
+- url: https://creditor.debbie.dk/api
+  description: Production
+security:
+- bearerAuth: []
+tags:
+- name: Files
+paths:
+  /files:
+    post:
+      summary: Upload a file
+      operationId: createFile
+      tags:
+      - Files
+      responses:
+        '201':
+          description: File created.
+  /files/{fileId}:
+    get:
+      summary: Get a file
+      operationId: getFile
+      tags:
+      - Files
+      parameters:
+      - in: path
+        name: fileId
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: A file resource.
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer

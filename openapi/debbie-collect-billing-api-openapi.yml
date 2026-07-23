@@ -1,0 +1,30 @@
+openapi: 3.1.0
+info:
+  title: Debbie Client Billing API
+  description: The Debbie Client API is intended for creditors integrating directly with Debbie. It allows clients to create and update collection cases, exchange payment data, and receive case status updates.
+  version: '1.0'
+  contact:
+    name: Debbie API Support
+    email: api-support@debbie.dk
+servers:
+- url: https://creditor.debbie.dk/api
+  description: Production
+security:
+- bearerAuth: []
+tags:
+- name: Billing
+paths:
+  /billing/deposit-distribution:
+    get:
+      summary: Get deposit distribution
+      operationId: getDepositDistribution
+      tags:
+      - Billing
+      responses:
+        '200':
+          description: Deposit distribution detail.
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
