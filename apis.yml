@@ -2,9 +2,22 @@ aid: debbie-collect
 name: Debbie Collect
 url: https://raw.githubusercontent.com/api-evangelist/debbie-collect/refs/heads/main/apis.yml
 kind: company
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 position: Consuming
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/debbie-collect.png
 tags:
   - Accounts Receivable
   - Collections
@@ -22,48 +35,226 @@ description: >-
   API for collectors integrating Debbie into existing systems, and a Client API for creditors creating cases and
   exchanging payment data.
 apis:
-  - aid: debbie-collect:debbie-platform-api
-    name: Debbie Platform API
-    description: >-
-      The Debbie Platform API exposes resources for cases, creditors, customers, vouchers, files, updates, billing, and
-      webhooks. It is used by collection agencies and other operators integrating Debbie into their core systems.
-    humanURL: https://documentation.debbiecollect.com
-    baseURL: https://api.debbie.dk
-    tags:
-      - Cases
-      - Collections
-      - Creditors
-      - Customers
-      - Webhooks
-    properties:
-      - type: Documentation
-        url: https://documentation.debbiecollect.com
-      - type: OpenAPI
-        url: openapi/debbie-platform-api-openapi.yml
-      - type: JSONSchema
-        url: json-schema/debbie-case.json
-      - type: JSONSchema
-        url: json-schema/debbie-customer.json
-      - type: Rules
-        url: rules/debbie-platform-api-rules.yml
-      - type: Capabilities
-        url: capabilities/debbie-platform-api-capabilities.yml
-  - aid: debbie-collect:debbie-client-api
-    name: Debbie Client API
-    description: >-
-      The Debbie Client API allows creditors to create collection cases, exchange payment data, and receive case status
-      updates. It is the primary integration surface for ERP/billing systems pushing overdue invoices into Debbie.
-    humanURL: https://creditor-docs.debbie.dk
-    baseURL: https://creditor.debbie.dk/api
-    tags:
-      - Cases
-      - Creditor
-      - Payments
-    properties:
-      - type: Documentation
-        url: https://creditor-docs.debbie.dk
-      - type: OpenAPI
-        url: openapi/debbie-client-api-openapi.yml
+- aid: debbie-collect:debbie-collect-billing-api
+  name: Debbie Collect Billing API
+  description: The Billing API from Debbie Collect — 1 operation(s) for billing.
+  humanURL: https://documentation.debbiecollect.com
+  baseURL: https://api.debbie.dk
+  tags:
+  - Billing
+  properties:
+  - type: OpenAPI
+    url: openapi/debbie-collect-billing-api-openapi.yml
+  - type: Documentation
+    url: https://documentation.debbiecollect.com
+  - type: JSONSchema
+    url: json-schema/debbie-case.json
+  - type: JSONSchema
+    url: json-schema/debbie-customer.json
+  - type: Rules
+    url: rules/debbie-platform-api-rules.yml
+  - type: Capabilities
+    url: capabilities/debbie-platform-api-capabilities.yml
+  - type: Documentation
+    url: https://creditor-docs.debbie.dk
+- aid: debbie-collect:debbie-collect-case-vouchers-api
+  name: Debbie Collect Case Vouchers API
+  description: The Case Vouchers API from Debbie Collect — 1 operation(s) for case vouchers.
+  humanURL: https://documentation.debbiecollect.com
+  baseURL: https://api.debbie.dk
+  tags:
+  - Case Vouchers
+  properties:
+  - type: OpenAPI
+    url: openapi/debbie-collect-case-vouchers-api-openapi.yml
+  - type: Documentation
+    url: https://documentation.debbiecollect.com
+  - type: JSONSchema
+    url: json-schema/debbie-case.json
+  - type: JSONSchema
+    url: json-schema/debbie-customer.json
+  - type: Rules
+    url: rules/debbie-platform-api-rules.yml
+  - type: Capabilities
+    url: capabilities/debbie-platform-api-capabilities.yml
+  - type: Documentation
+    url: https://creditor-docs.debbie.dk
+- aid: debbie-collect:debbie-collect-cases-api
+  name: Debbie Collect Cases API
+  description: The Cases API from Debbie Collect — 2 operation(s) for cases.
+  humanURL: https://documentation.debbiecollect.com
+  baseURL: https://api.debbie.dk
+  tags:
+  - Cases
+  properties:
+  - type: OpenAPI
+    url: openapi/debbie-collect-cases-api-openapi.yml
+  - type: Documentation
+    url: https://documentation.debbiecollect.com
+  - type: JSONSchema
+    url: json-schema/debbie-case.json
+  - type: JSONSchema
+    url: json-schema/debbie-customer.json
+  - type: Rules
+    url: rules/debbie-platform-api-rules.yml
+  - type: Capabilities
+    url: capabilities/debbie-platform-api-capabilities.yml
+  - type: Documentation
+    url: https://creditor-docs.debbie.dk
+- aid: debbie-collect:debbie-collect-creditors-api
+  name: Debbie Collect Creditors API
+  description: The Creditors API from Debbie Collect — 2 operation(s) for creditors.
+  humanURL: https://documentation.debbiecollect.com
+  baseURL: https://api.debbie.dk
+  tags:
+  - Creditors
+  properties:
+  - type: OpenAPI
+    url: openapi/debbie-collect-creditors-api-openapi.yml
+  - type: Documentation
+    url: https://documentation.debbiecollect.com
+  - type: JSONSchema
+    url: json-schema/debbie-case.json
+  - type: JSONSchema
+    url: json-schema/debbie-customer.json
+  - type: Rules
+    url: rules/debbie-platform-api-rules.yml
+  - type: Capabilities
+    url: capabilities/debbie-platform-api-capabilities.yml
+  - type: Documentation
+    url: https://creditor-docs.debbie.dk
+- aid: debbie-collect:debbie-collect-customers-api
+  name: Debbie Collect Customers API
+  description: The Customers API from Debbie Collect — 2 operation(s) for customers.
+  humanURL: https://documentation.debbiecollect.com
+  baseURL: https://api.debbie.dk
+  tags:
+  - Customers
+  properties:
+  - type: OpenAPI
+    url: openapi/debbie-collect-customers-api-openapi.yml
+  - type: Documentation
+    url: https://documentation.debbiecollect.com
+  - type: JSONSchema
+    url: json-schema/debbie-case.json
+  - type: JSONSchema
+    url: json-schema/debbie-customer.json
+  - type: Rules
+    url: rules/debbie-platform-api-rules.yml
+  - type: Capabilities
+    url: capabilities/debbie-platform-api-capabilities.yml
+  - type: Documentation
+    url: https://creditor-docs.debbie.dk
+- aid: debbie-collect:debbie-collect-files-api
+  name: Debbie Collect Files API
+  description: The Files API from Debbie Collect — 2 operation(s) for files.
+  humanURL: https://documentation.debbiecollect.com
+  baseURL: https://api.debbie.dk
+  tags:
+  - Files
+  properties:
+  - type: OpenAPI
+    url: openapi/debbie-collect-files-api-openapi.yml
+  - type: Documentation
+    url: https://documentation.debbiecollect.com
+  - type: JSONSchema
+    url: json-schema/debbie-case.json
+  - type: JSONSchema
+    url: json-schema/debbie-customer.json
+  - type: Rules
+    url: rules/debbie-platform-api-rules.yml
+  - type: Capabilities
+    url: capabilities/debbie-platform-api-capabilities.yml
+  - type: Documentation
+    url: https://creditor-docs.debbie.dk
+- aid: debbie-collect:debbie-collect-payments-api
+  name: Debbie Collect Payments API
+  description: The Payments API from Debbie Collect — 1 operation(s) for payments.
+  humanURL: https://documentation.debbiecollect.com
+  baseURL: https://api.debbie.dk
+  tags:
+  - Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/debbie-collect-payments-api-openapi.yml
+  - type: Documentation
+    url: https://documentation.debbiecollect.com
+  - type: JSONSchema
+    url: json-schema/debbie-case.json
+  - type: JSONSchema
+    url: json-schema/debbie-customer.json
+  - type: Rules
+    url: rules/debbie-platform-api-rules.yml
+  - type: Capabilities
+    url: capabilities/debbie-platform-api-capabilities.yml
+  - type: Documentation
+    url: https://creditor-docs.debbie.dk
+- aid: debbie-collect:debbie-collect-properties-api
+  name: Debbie Collect Properties API
+  description: The Properties API from Debbie Collect — 1 operation(s) for properties.
+  humanURL: https://documentation.debbiecollect.com
+  baseURL: https://api.debbie.dk
+  tags:
+  - Properties
+  properties:
+  - type: OpenAPI
+    url: openapi/debbie-collect-properties-api-openapi.yml
+  - type: Documentation
+    url: https://documentation.debbiecollect.com
+  - type: JSONSchema
+    url: json-schema/debbie-case.json
+  - type: JSONSchema
+    url: json-schema/debbie-customer.json
+  - type: Rules
+    url: rules/debbie-platform-api-rules.yml
+  - type: Capabilities
+    url: capabilities/debbie-platform-api-capabilities.yml
+  - type: Documentation
+    url: https://creditor-docs.debbie.dk
+- aid: debbie-collect:debbie-collect-updates-api
+  name: Debbie Collect Updates API
+  description: The Updates API from Debbie Collect — 2 operation(s) for updates.
+  humanURL: https://documentation.debbiecollect.com
+  baseURL: https://api.debbie.dk
+  tags:
+  - Updates
+  properties:
+  - type: OpenAPI
+    url: openapi/debbie-collect-updates-api-openapi.yml
+  - type: Documentation
+    url: https://documentation.debbiecollect.com
+  - type: JSONSchema
+    url: json-schema/debbie-case.json
+  - type: JSONSchema
+    url: json-schema/debbie-customer.json
+  - type: Rules
+    url: rules/debbie-platform-api-rules.yml
+  - type: Capabilities
+    url: capabilities/debbie-platform-api-capabilities.yml
+  - type: Documentation
+    url: https://creditor-docs.debbie.dk
+- aid: debbie-collect:debbie-collect-webhooks-api
+  name: Debbie Collect Webhooks API
+  description: The Webhooks API from Debbie Collect — 2 operation(s) for webhooks.
+  humanURL: https://documentation.debbiecollect.com
+  baseURL: https://api.debbie.dk
+  tags:
+  - Webhooks
+  properties:
+  - type: OpenAPI
+    url: openapi/debbie-collect-webhooks-api-openapi.yml
+  - type: Documentation
+    url: https://documentation.debbiecollect.com
+  - type: JSONSchema
+    url: json-schema/debbie-case.json
+  - type: JSONSchema
+    url: json-schema/debbie-customer.json
+  - type: Rules
+    url: rules/debbie-platform-api-rules.yml
+  - type: Capabilities
+    url: capabilities/debbie-platform-api-capabilities.yml
+  - type: Documentation
+    url: https://creditor-docs.debbie.dk
 common:
   - type: AgenticAccess
     url: agentic-access/debbie-collect-agentic-access.yml
