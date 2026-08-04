@@ -1,0 +1,32 @@
+{
+  "provider": "debbie-collect",
+  "sources": [
+    "debbie-collect-billing-api-openapi.yml",
+    "debbie-collect-case-vouchers-api-openapi.yml",
+    "debbie-collect-cases-api-openapi.yml",
+    "debbie-collect-creditors-api-openapi.yml",
+    "debbie-collect-customers-api-openapi.yml",
+    "debbie-collect-files-api-openapi.yml",
+    "debbie-collect-payments-api-openapi.yml",
+    "debbie-collect-properties-api-openapi.yml",
+    "debbie-collect-updates-api-openapi.yml",
+    "debbie-collect-webhooks-api-openapi.yml"
+  ],
+  "outputs": [
+    "debbie-collect-billing-api-openapi.yml",
+    "debbie-collect-case-vouchers-api-openapi.yml",
+    "debbie-collect-cases-api-openapi.yml",
+    "debbie-collect-creditors-api-openapi.yml",
+    "debbie-collect-customers-api-openapi.yml",
+    "debbie-collect-files-api-openapi.yml",
+    "debbie-collect-payments-api-openapi.yml",
+    "debbie-collect-properties-api-openapi.yml",
+    "debbie-collect-updates-api-openapi.yml",
+    "debbie-collect-webhooks-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
