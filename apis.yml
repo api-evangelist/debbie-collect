@@ -53,8 +53,6 @@ apis:
     url: json-schema/debbie-customer.json
   - type: Rules
     url: rules/debbie-platform-api-rules.yml
-  - type: Capabilities
-    url: capabilities/debbie-platform-api-capabilities.yml
   - type: Documentation
     url: https://creditor-docs.debbie.dk
 - aid: debbie-collect:debbie-collect-case-vouchers-api
@@ -75,8 +73,6 @@ apis:
     url: json-schema/debbie-customer.json
   - type: Rules
     url: rules/debbie-platform-api-rules.yml
-  - type: Capabilities
-    url: capabilities/debbie-platform-api-capabilities.yml
   - type: Documentation
     url: https://creditor-docs.debbie.dk
 - aid: debbie-collect:debbie-collect-cases-api
@@ -97,8 +93,6 @@ apis:
     url: json-schema/debbie-customer.json
   - type: Rules
     url: rules/debbie-platform-api-rules.yml
-  - type: Capabilities
-    url: capabilities/debbie-platform-api-capabilities.yml
   - type: Documentation
     url: https://creditor-docs.debbie.dk
 - aid: debbie-collect:debbie-collect-creditors-api
@@ -119,8 +113,6 @@ apis:
     url: json-schema/debbie-customer.json
   - type: Rules
     url: rules/debbie-platform-api-rules.yml
-  - type: Capabilities
-    url: capabilities/debbie-platform-api-capabilities.yml
   - type: Documentation
     url: https://creditor-docs.debbie.dk
 - aid: debbie-collect:debbie-collect-customers-api
@@ -141,8 +133,6 @@ apis:
     url: json-schema/debbie-customer.json
   - type: Rules
     url: rules/debbie-platform-api-rules.yml
-  - type: Capabilities
-    url: capabilities/debbie-platform-api-capabilities.yml
   - type: Documentation
     url: https://creditor-docs.debbie.dk
 - aid: debbie-collect:debbie-collect-files-api
@@ -163,8 +153,6 @@ apis:
     url: json-schema/debbie-customer.json
   - type: Rules
     url: rules/debbie-platform-api-rules.yml
-  - type: Capabilities
-    url: capabilities/debbie-platform-api-capabilities.yml
   - type: Documentation
     url: https://creditor-docs.debbie.dk
 - aid: debbie-collect:debbie-collect-payments-api
@@ -185,8 +173,6 @@ apis:
     url: json-schema/debbie-customer.json
   - type: Rules
     url: rules/debbie-platform-api-rules.yml
-  - type: Capabilities
-    url: capabilities/debbie-platform-api-capabilities.yml
   - type: Documentation
     url: https://creditor-docs.debbie.dk
 - aid: debbie-collect:debbie-collect-properties-api
@@ -207,8 +193,6 @@ apis:
     url: json-schema/debbie-customer.json
   - type: Rules
     url: rules/debbie-platform-api-rules.yml
-  - type: Capabilities
-    url: capabilities/debbie-platform-api-capabilities.yml
   - type: Documentation
     url: https://creditor-docs.debbie.dk
 - aid: debbie-collect:debbie-collect-updates-api
@@ -229,8 +213,6 @@ apis:
     url: json-schema/debbie-customer.json
   - type: Rules
     url: rules/debbie-platform-api-rules.yml
-  - type: Capabilities
-    url: capabilities/debbie-platform-api-capabilities.yml
   - type: Documentation
     url: https://creditor-docs.debbie.dk
 - aid: debbie-collect:debbie-collect-webhooks-api
@@ -251,8 +233,6 @@ apis:
     url: json-schema/debbie-customer.json
   - type: Rules
     url: rules/debbie-platform-api-rules.yml
-  - type: Capabilities
-    url: capabilities/debbie-platform-api-capabilities.yml
   - type: Documentation
     url: https://creditor-docs.debbie.dk
 common:
