@@ -1,0 +1,35 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Debbie Client Billing API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Billing",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get deposit distribution",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://creditor.debbie.dk/api/billing/deposit-distribution"
+          },
+          "docs": "Get deposit distribution"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

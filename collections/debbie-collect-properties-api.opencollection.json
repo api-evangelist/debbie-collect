@@ -1,0 +1,35 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Debbie Client Billing Properties API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Properties",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get properties by reference",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://creditor.debbie.dk/api/properties"
+          },
+          "docs": "Get properties by reference"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

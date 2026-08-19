@@ -1,0 +1,126 @@
+{
+  "item": [
+    {
+      "id": "5a8bc429-cb76-429e-933d-72d917183556",
+      "name": "Payments",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "263a2c4a-692f-42ca-beb9-cd83a7c88149",
+          "name": "Submit payment information",
+          "request": {
+            "name": "Submit payment information",
+            "description": {},
+            "url": {
+              "path": [
+                "cases",
+                ":caseId",
+                "payments"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "caseId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "700ca97a-78f2-4101-a4b2-7a023c0499c9",
+              "name": "Payment recorded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cases",
+                    ":caseId",
+                    "payments"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "caseId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://creditor.debbie.dk/api",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "3a334798-4d5f-49d2-a525-37c3c7585689",
+    "name": "Debbie Client Billing Payments API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Debbie Client API is intended for creditors integrating directly with Debbie. It allows clients to create and update collection cases, exchange payment data, and receive case status updates.\n\nContact Support:\n Name: Debbie API Support\n Email: api-support@debbie.dk",
+      "type": "text/plain"
+    }
+  }
+}

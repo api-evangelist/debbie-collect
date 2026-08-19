@@ -1,0 +1,71 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Debbie Client Billing Creditors API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Creditors",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a creditor",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://creditor.debbie.dk/api/creditors"
+          },
+          "docs": "Create a creditor"
+        },
+        {
+          "info": {
+            "name": "Get a creditor",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://creditor.debbie.dk/api/creditors/:creditorId",
+            "params": [
+              {
+                "name": "creditorId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a creditor"
+        },
+        {
+          "info": {
+            "name": "Update a creditor",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://creditor.debbie.dk/api/creditors/:creditorId",
+            "params": [
+              {
+                "name": "creditorId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update a creditor"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

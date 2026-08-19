@@ -1,0 +1,53 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Debbie Client Billing Files API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Files",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Upload a file",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://creditor.debbie.dk/api/files"
+          },
+          "docs": "Upload a file"
+        },
+        {
+          "info": {
+            "name": "Get a file",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://creditor.debbie.dk/api/files/:fileId",
+            "params": [
+              {
+                "name": "fileId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a file"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

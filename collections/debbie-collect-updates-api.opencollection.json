@@ -1,0 +1,53 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Debbie Client Billing Updates API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Updates",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create an update",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://creditor.debbie.dk/api/updates"
+          },
+          "docs": "Create an update"
+        },
+        {
+          "info": {
+            "name": "Update an update",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://creditor.debbie.dk/api/updates/:updateId",
+            "params": [
+              {
+                "name": "updateId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update an update"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

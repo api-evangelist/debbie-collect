@@ -1,0 +1,53 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Debbie Client Billing Webhooks API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Webhooks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List webhook items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://creditor.debbie.dk/api/webhooks/items"
+          },
+          "docs": "List webhook items"
+        },
+        {
+          "info": {
+            "name": "Patch a webhook item",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://creditor.debbie.dk/api/webhooks/items/:itemId",
+            "params": [
+              {
+                "name": "itemId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Patch a webhook item"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,82 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Debbie Client Billing Cases API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Cases",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List cases",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://creditor.debbie.dk/api/cases"
+          },
+          "docs": "List cases"
+        },
+        {
+          "info": {
+            "name": "Create a case",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://creditor.debbie.dk/api/cases"
+          },
+          "docs": "Create a case"
+        },
+        {
+          "info": {
+            "name": "Get a case",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://creditor.debbie.dk/api/cases/:caseId",
+            "params": [
+              {
+                "name": "caseId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a case"
+        },
+        {
+          "info": {
+            "name": "Update a case",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://creditor.debbie.dk/api/cases/:caseId",
+            "params": [
+              {
+                "name": "caseId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update a case"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

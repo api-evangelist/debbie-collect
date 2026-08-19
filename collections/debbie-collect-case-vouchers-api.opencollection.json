@@ -1,0 +1,60 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Debbie Client Billing Case Vouchers API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Case Vouchers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get case vouchers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://creditor.debbie.dk/api/cases/:caseId/vouchers",
+            "params": [
+              {
+                "name": "caseId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get case vouchers"
+        },
+        {
+          "info": {
+            "name": "Add case voucher",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://creditor.debbie.dk/api/cases/:caseId/vouchers",
+            "params": [
+              {
+                "name": "caseId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Add case voucher"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
