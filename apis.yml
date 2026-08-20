@@ -20,6 +20,13 @@ access: 3rd-Party
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/debbie-collect.png
 tags:
   - Accounts Receivable
+  - Collection
+  - Debt Collection
+  - Fintech
+  - Payments
+  - Software-as-a-Service
+tags_raw:
+  - Accounts Receivable
   - Collections
   - Debt Collection
   - FinTech
@@ -141,6 +148,8 @@ apis:
   humanURL: https://documentation.debbiecollect.com
   baseURL: https://api.debbie.dk
   tags:
+  - File
+  tags_raw:
   - Files
   properties:
   - type: OpenAPI
@@ -221,6 +230,8 @@ apis:
   humanURL: https://documentation.debbiecollect.com
   baseURL: https://api.debbie.dk
   tags:
+  - Webhook
+  tags_raw:
   - Webhooks
   properties:
   - type: OpenAPI
