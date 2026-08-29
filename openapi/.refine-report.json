@@ -1,25 +1,17 @@
 {
   "provider": "debbie-collect",
   "sources": [
-    "debbie-collect-billing-api-openapi.yml",
-    "debbie-collect-case-vouchers-api-openapi.yml",
-    "debbie-collect-cases-api-openapi.yml",
-    "debbie-collect-creditors-api-openapi.yml",
-    "debbie-collect-customers-api-openapi.yml",
-    "debbie-collect-files-api-openapi.yml",
-    "debbie-collect-payments-api-openapi.yml",
-    "debbie-collect-properties-api-openapi.yml",
-    "debbie-collect-updates-api-openapi.yml",
-    "debbie-collect-webhooks-api-openapi.yml"
+    "_original/debbie-client-api-openapi.yml",
+    "_original/debbie-platform-api-openapi.yml"
   ],
   "outputs": [
+    "debbie-collect-cases-api-openapi.yml",
+    "debbie-collect-payments-api-openapi.yml",
     "debbie-collect-billing-api-openapi.yml",
     "debbie-collect-case-vouchers-api-openapi.yml",
-    "debbie-collect-cases-api-openapi.yml",
     "debbie-collect-creditors-api-openapi.yml",
     "debbie-collect-customers-api-openapi.yml",
     "debbie-collect-files-api-openapi.yml",
-    "debbie-collect-payments-api-openapi.yml",
     "debbie-collect-properties-api-openapi.yml",
     "debbie-collect-updates-api-openapi.yml",
     "debbie-collect-webhooks-api-openapi.yml"
@@ -27,6 +19,22 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (2 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "debbie-client-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "debbie-platform-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "tag 'Cases' spans 2 source specs (debbie-client-api-openapi.yml, debbie-platform-api-openapi.yml): per-path servers applied"
+  ],
+  "skipped": [
+    "debbie-collect-billing-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "debbie-collect-case-vouchers-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "debbie-collect-cases-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "debbie-collect-creditors-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "debbie-collect-customers-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "debbie-collect-files-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "debbie-collect-payments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "debbie-collect-properties-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "debbie-collect-updates-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "debbie-collect-webhooks-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
