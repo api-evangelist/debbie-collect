@@ -259,6 +259,9 @@ apis:
   - type: Documentation
     url: https://creditor-docs.debbie.dk
 common:
+  - type: CapabilityMap
+    url: capabilities/debbie-collect-capability-edges.yml
+    name: Debbie Collect Business Capability Map
   - type: AgenticAccess
     url: agentic-access/debbie-collect-agentic-access.yml
   - type: DomainSecurity

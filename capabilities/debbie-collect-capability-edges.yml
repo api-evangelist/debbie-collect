@@ -1,0 +1,37 @@
+slug: debbie-collect
+provider: Debbie Collect
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 2
+edges:
+- tag: Cases
+  spec_file: debbie-collect-cases-api-openapi.yml
+  capability_id: BC-200.30
+  capability_id_l1: BC-200
+  capability_name: Accounts Receivable Management
+  confidence: 0.75
+  evidence: POST /cases createCase — Create a case; vendor "automates debt collection and accounts receivable
+    management" and the client API lets clients "create and update collection cases"
+  reason: Cases are collection cases on a debt-collection platform; creating and tracking them is the
+    core of receivables collections, which the candidate list places under Accounts Receivable Management
+    (collections).
+- tag: Payments
+  spec_file: debbie-collect-payments-api-openapi.yml
+  capability_id: BC-200.30
+  capability_id_l1: BC-200
+  capability_name: Accounts Receivable Management
+  confidence: 0.7
+  evidence: POST /cases/{caseId}/payments submitPayment — Submit payment information; client API "allows
+    clients to ... exchange payment data"
+  reason: Creditors report payments received against a collection case, which is cash application against
+    outstanding receivables — Accounts Receivable Management. Narrow surface (one operation) so confidence
+    is moderate.
