@@ -259,6 +259,12 @@ apis:
   - type: Documentation
     url: https://creditor-docs.debbie.dk
 common:
+  - type: Plans
+    url: plans/debbie-collect-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/debbie-collect-rate-limits.yml
+  - type: FinOps
+    url: finops/debbie-collect-finops.yml
   - type: CapabilityMap
     url: capabilities/debbie-collect-capability-edges.yml
     name: Debbie Collect Business Capability Map
