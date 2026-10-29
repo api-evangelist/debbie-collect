@@ -1,4 +1,4 @@
-# Debbie Collect (debbie-collect)
+# Debbie Collect
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,88 +66,160 @@
 
 Debbie (Debbie Collect, operated by Intellitech Systems A/S) is an AI-driven SaaS platform that automates debt collection and accounts receivable management. Companies, collection agencies, and law firms use Debbie to run digital reminder flows, debtor dialogue, payment plans, and case management. Debbie publishes two RESTful APIs - a Platform API for collectors integrating Debbie into existing systems, and a Client API for creditors creating cases and exchanging payment data.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/debbie-collect/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/debbie-collect/refs/heads/main/apis.yml)
+**Areas:** Accounts Receivable · Collection · Debt Collection · Fintech · Payments · Software-as-a-Service
 
-## Scope
+## Debbie Collect on APIs.io
 
-- **Position:** Consuming
-- **Access:** 3rd-Party
+Everything profiled for Debbie Collect is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/debbie-collect/](https://apis.io/providers/debbie-collect/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (10)
 
-- Accounts Receivable
-- Collections
-- Debt Collection
-- FinTech
-- Payments
-- SaaS
+- [Debbie Collect Billing API](https://apis.io/apis/debbie-collect/debbie-collect-billing-api/) — The Billing API from Debbie Collect — 1 operation(s) for billing.
+- [Debbie Collect Case Vouchers API](https://apis.io/apis/debbie-collect/debbie-collect-case-vouchers-api/) — The Case Vouchers API from Debbie Collect — 1 operation(s) for case vouchers.
+- [Debbie Collect Cases API](https://apis.io/apis/debbie-collect/debbie-collect-cases-api/) — The Cases API from Debbie Collect — 2 operation(s) for cases.
+- [Debbie Collect Creditors API](https://apis.io/apis/debbie-collect/debbie-collect-creditors-api/) — The Creditors API from Debbie Collect — 2 operation(s) for creditors.
+- [Debbie Collect Customers API](https://apis.io/apis/debbie-collect/debbie-collect-customers-api/) — The Customers API from Debbie Collect — 2 operation(s) for customers.
+- [Debbie Collect Files API](https://apis.io/apis/debbie-collect/debbie-collect-files-api/) — The Files API from Debbie Collect — 2 operation(s) for files.
+- [Debbie Collect Payments API](https://apis.io/apis/debbie-collect/debbie-collect-payments-api/) — The Payments API from Debbie Collect — 1 operation(s) for payments.
+- [Debbie Collect Properties API](https://apis.io/apis/debbie-collect/debbie-collect-properties-api/) — The Properties API from Debbie Collect — 1 operation(s) for properties.
+- [Debbie Collect Updates API](https://apis.io/apis/debbie-collect/debbie-collect-updates-api/) — The Updates API from Debbie Collect — 2 operation(s) for updates.
+- [Debbie Collect Webhooks API](https://apis.io/apis/debbie-collect/debbie-collect-webhooks-api/) — The Webhooks API from Debbie Collect — 2 operation(s) for webhooks.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2025-02-24
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Debbie Platform API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Debbie Platform API exposes resources for cases, creditors, customers, vouchers, files, updates, billing, and webhooks. It is used by collection agencies and other operators integrating Debbie into their core systems.
+- [Debbie Collect Agentic Access](https://apis.io/agentic-access/debbie-collect/debbie-collect-agentic-access/)
 
-- **Human URL:** [https://documentation.debbiecollect.com](https://documentation.debbiecollect.com)
-- **Base URL:** `https://api.debbie.dk`
+#### JSON Schema (2)
 
-#### Tags
+The data models the API reads and writes.
 
-- Cases
-- Collections
-- Creditors
-- Customers
-- Webhooks
+- [Debbie Case](https://apis.io/schemas/debbie-collect/debbie-case/)
+- [Debbie Customer](https://apis.io/schemas/debbie-collect/debbie-customer/)
 
-#### Properties
+#### JSON-LD (1)
 
-- [Documentation](https://documentation.debbiecollect.com)
-- [OpenAPI](openapi/debbie-platform-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/debbie-platform-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/debbie-platform-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/debbie-case.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/debbie-customer.json) — [JSON Schema](https://json-schema.org/specification)
-- [Rules](rules/debbie-platform-api-rules.yml)
-- [Capabilities](capabilities/debbie-platform-api-capabilities.yml)
+Linked-data contexts for the provider's vocabulary.
 
-### Debbie Client API
+- [Debbie Context](https://apis.io/jsonld/debbie-collect/debbie-context/)
 
-The Debbie Client API allows creditors to create collection cases, exchange payment data, and receive case status updates. It is the primary integration surface for ERP/billing systems pushing overdue invoices into Debbie.
+#### Vocabulary (1)
 
-- **Human URL:** [https://creditor-docs.debbie.dk](https://creditor-docs.debbie.dk)
-- **Base URL:** `https://creditor.debbie.dk/api`
+The provider's domain terms, defined.
 
-#### Tags
+- [Debbie Collect Vocabulary](https://apis.io/vocabularies/debbie-collect/debbie-vocabulary/)
 
-- Cases
-- Creditor
-- Payments
+#### Collections (12)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [Documentation](https://creditor-docs.debbie.dk)
-- [OpenAPI](openapi/debbie-client-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/debbie-client-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/debbie-client-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Debbie Client API](https://apis.io/collections/debbie-collect/open-debbie-client-api/)
+- [Debbie Client Billing API](https://apis.io/collections/debbie-collect/open-debbie-collect-billing-api/)
+- [Debbie Client Billing Case Vouchers API](https://apis.io/collections/debbie-collect/open-debbie-collect-case-vouchers-api/)
+- [Debbie Client Billing Cases API](https://apis.io/collections/debbie-collect/open-debbie-collect-cases-api/)
+- [Debbie Client Billing Creditors API](https://apis.io/collections/debbie-collect/open-debbie-collect-creditors-api/)
+- [Debbie Client Billing Customers API](https://apis.io/collections/debbie-collect/open-debbie-collect-customers-api/)
+- [Debbie Client Billing Files API](https://apis.io/collections/debbie-collect/open-debbie-collect-files-api/)
+- [Debbie Client Billing Payments API](https://apis.io/collections/debbie-collect/open-debbie-collect-payments-api/)
+- [Debbie Client Billing Properties API](https://apis.io/collections/debbie-collect/open-debbie-collect-properties-api/)
+- [Debbie Client Billing Updates API](https://apis.io/collections/debbie-collect/open-debbie-collect-updates-api/)
+- [Debbie Client Billing Webhooks API](https://apis.io/collections/debbie-collect/open-debbie-collect-webhooks-api/)
+- [Debbie Platform API](https://apis.io/collections/debbie-collect/open-debbie-platform-api/)
 
-## Common Properties
+#### Governance rules (2)
 
-- [LinkedIn](https://www.linkedin.com/company/debbie-rewards)
+Spectral rulesets for the provider's contracts.
+
+- [Debbie Collect — jsonschema rules](https://apis.io/rules/debbie-collect/debbie-collect-jsonschema-spectral-rules/)
+- [Debbie Collect — debbie platform api rules](https://apis.io/rules/debbie-collect/debbie-platform-api-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Debbie Collect Authentication](https://apis.io/security/debbie-collect/debbie-collect-authentication/)
+- [Debbie Collect Domain Security](https://apis.io/security/debbie-collect/debbie-collect-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Debbie Collect Plans Pricing](https://apis.io/plans/debbie-collect/debbie-collect-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Debbie Collect Rate Limits](https://apis.io/rate-limits/debbie-collect/debbie-collect-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Debbie Collect Finops](https://apis.io/finops/debbie-collect/debbie-collect-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://debbiecollect.com/)
-- [A P I  Documentation](https://debbiecollect.com/api-documentation)
-- [Status Page](https://debbie.freshstatus.io)
-- [Security &  Compliance](https://debbiecollect.com/security-compliance-2)
 - [Blog](https://debbiecollect.com/blog)
-- [Support](mailto:api-support@debbie.dk)
-- [JSON-LD](json-ld/debbie-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [Vocabulary](vocabulary/debbie-vocabulary.yml)
+- [Status](https://debbie.freshstatus.io)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 34.3** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 55.9 |
+| Contract governance | 27.3 |
+| Operational transparency | 23.7 |
+| Developer ergonomics | 35.7 |
+| Access clarity | 7.9 |
+
+**Agent readiness 17.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 15.2** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/debbie-collect/](https://apis.io/providers/debbie-collect/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Debbie Collect: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/debbie-collect/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
